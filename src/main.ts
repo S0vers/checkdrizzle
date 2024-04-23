@@ -1,11 +1,11 @@
-import "dotenv";
+import "dotenv/config";
 
 import { db } from "./drizzle/db";
 import { UserTable } from "./drizzle/schema";
 
 async function main() {
-  // const deleteResult = await db.delete(UserTable).execute();
-  const result = await db.select().from(UserTable).execute();
+  const deleteResult = await db.delete(UserTable).execute();
+  // const result = await db.select().from(UserTable).execute();
   // const user = await db
   //   .insert(UserTable)
   //   .values({
